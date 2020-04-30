@@ -48,12 +48,13 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 300;
     color: #555252;
     letter-spacing: -0.6px;
 }
 .logo::first-letter {
     color: #1abc9c;
+    font-weight: 900;
 }
 .navigation_list {
     float: right;
@@ -64,6 +65,7 @@ header {
     text-transform: uppercase;
     font-family: Open-sans, sans-serif;
     font-size: 14px;
+    font-weight: 700;
 }
 .navigation_list_item:not(:last-child) {
     margin-right: 34px;
@@ -102,13 +104,13 @@ header {
     width: 104px;
     height: 104px;
     border: none;
-    background-color: transparent;
+    background-color: rgba(26, 188, 156, .65);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 }
 .button_wrapper button:hover {
-    background-color: #1abc9c;
+    background-color: rgb(26, 188, 156);
 }
 .slider_left {
     float: left;
@@ -138,10 +140,18 @@ header {
 .slide_item {
     position: relative;
 }
+.slide_item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+}
 .overlay_bg {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.55);
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
